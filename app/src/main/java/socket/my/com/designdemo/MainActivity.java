@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import socket.my.com.designdemo.build.BuildActivity;
+import socket.my.com.designdemo.builder.BuilderActivity;
 import socket.my.com.designdemo.single.SingleActivity;
 
 /**
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, SingleActivity.class);
                 break;
             case R.id.bt_build:
-                intent = new Intent(this, BuildActivity.class);
+                intent = new Intent(this, BuilderActivity.class);
                 break;
         }
         if (intent != null) {
