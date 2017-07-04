@@ -54,7 +54,6 @@ public class SingleActivity extends AppCompatActivity implements View.OnClickLis
                 easySaleTicket();
                 break;
             case R.id.bt_single_1://枚举单例
-                easySaleTicket();
                 tv_single_1.setText(枚举单例.INSTANCE.getUrl());
                 break;
         }
