@@ -25,18 +25,18 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_build);
 
 
-        findViewById(R.id.bt_0).setOnClickListener(this);
-        findViewById(R.id.bt_1).setOnClickListener(this);
-        findViewById(R.id.bt_2).setOnClickListener(this);
-        findViewById(R.id.bt_3).setOnClickListener(this);
-        findViewById(R.id.bt_4).setOnClickListener(this);
-        findViewById(R.id.bt_5).setOnClickListener(this);
+        findViewById(R.id.bt_build_0).setOnClickListener(this);
+        findViewById(R.id.bt_build_1).setOnClickListener(this);
+        findViewById(R.id.bt_build_2).setOnClickListener(this);
+        findViewById(R.id.bt_build_3).setOnClickListener(this);
+        findViewById(R.id.bt_build_4).setOnClickListener(this);
+        findViewById(R.id.bt_build_5).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.bt_0:
+            case R.id.bt_build_0:
                 BuilderDialog.with(this)
                         .title("标题")
                         .message("我想靠右边显示")
@@ -51,7 +51,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
                         .build()
                         .show();
                 break;
-            case R.id.bt_1:
+            case R.id.bt_build_1:
                 BuilderDialog.with(this)
                         .message("我想居中")
                         .canCancel(false)
@@ -65,7 +65,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
                         .build()
                         .show();
                 break;
-            case R.id.bt_2:
+            case R.id.bt_build_2:
                 BuilderDialog.with(this)
                         .message("点击外部可以关闭，不信你点点")
                         .title("再来个标题")
@@ -87,7 +87,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
                         .build()
                         .show();
                 break;
-            case R.id.bt_3:
+            case R.id.bt_build_3:
                 BuilderDialog.with(this)
                         .message("点击外部不可以关闭")
                         .canCancel(false)
@@ -110,7 +110,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
                         .build()
                         .show();
                 break;
-            case R.id.bt_4:
+            case R.id.bt_build_4:
                 BuilderDialog.with(this)
                         .imageResource(R.mipmap.icon_failed)
                         .message("非常抱歉，充值失败！")
@@ -132,7 +132,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
                         .build()
                         .show();
                 break;
-            case R.id.bt_5:
+            case R.id.bt_build_5:
                 BuilderDialog.with(this)
                         .title("提示")
                         .message("您确认退出登录吗？")

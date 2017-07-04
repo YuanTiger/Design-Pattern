@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import socket.my.com.designdemo.R;
-import utils.ScreenUtil;
+import socket.my.com.designdemo.utils.ScreenUtil;
 
 /**
  * Author：mengyuan
@@ -45,7 +45,9 @@ public class BuilderDialog extends Dialog {
 
 
     public BuilderDialog(DialogConfig config) {
-        super(config.context);
+        //设置没有标题的Dialog风格
+        super(config.context,R.style.NoTitleDialog);
+
         View contentView = LayoutInflater.from(config.context).inflate(R.layout.dialog_build, null);
         setContentView(contentView);
 
@@ -129,7 +131,7 @@ public class BuilderDialog extends Dialog {
             return;
         }
         ViewGroup.LayoutParams layoutParams = ivIcon.getLayoutParams();
-        layoutParams.width = ScreenUtil.dp2Px(this.getContext(), imageWidth);
+        layoutParams.width = ScreenUtil.dp2Px(imageWidth);
         ivIcon.setLayoutParams(layoutParams);
     }
 
@@ -143,7 +145,7 @@ public class BuilderDialog extends Dialog {
             return;
         }
         ViewGroup.LayoutParams layoutParams = ivIcon.getLayoutParams();
-        layoutParams.height = ScreenUtil.dp2Px(this.getContext(), imageHeight);
+        layoutParams.height = ScreenUtil.dp2Px(imageHeight);
         ivIcon.setLayoutParams(layoutParams);
     }
 
