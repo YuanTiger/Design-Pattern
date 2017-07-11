@@ -4,10 +4,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 import socket.my.com.designdemo.R;
-import socket.my.com.designdemo.builder.customerview.BuilderDialog;
+import socket.my.com.designdemo.builder.dialog.BuilderDialog;
+import socket.my.com.designdemo.builder.simple.ConcretePhoneBuilder;
+import socket.my.com.designdemo.builder.simple.PhoneBuilder;
+import socket.my.com.designdemo.builder.simple.PhoneDirector;
+import socket.my.com.designdemo.builder.simple.PhoneProduct;
 
 /**
  * Author：mengyuan
@@ -19,11 +26,14 @@ import socket.my.com.designdemo.builder.customerview.BuilderDialog;
 public class BuilderActivity extends AppCompatActivity implements View.OnClickListener {
 
 
+    private TextView tv_build_6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_build);
 
+        tv_build_6 = (TextView) findViewById(R.id.tv_build_6);
 
         findViewById(R.id.bt_build_0).setOnClickListener(this);
         findViewById(R.id.bt_build_1).setOnClickListener(this);
@@ -31,6 +41,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
         findViewById(R.id.bt_build_3).setOnClickListener(this);
         findViewById(R.id.bt_build_4).setOnClickListener(this);
         findViewById(R.id.bt_build_5).setOnClickListener(this);
+        findViewById(R.id.bt_build_6).setOnClickListener(this);
     }
 
     @Override
@@ -151,6 +162,30 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
                         })
                         .build()
                         .show();
+                break;
+            case R.id.bt_build_6:
+                //创建Builder对象
+                PhoneBuilder miBuilder = new ConcretePhoneBuilder();
+                //创建管理者
+                PhoneDirector director = new PhoneDirector(miBuilder);
+                //生成商品
+                PhoneProduct product = null;
+                switch (new Random().nextInt(4)) {
+                    case 0:
+                        product = director.constuct("小米", "骁龙825", "4GB", "1500万像素");
+                        break;
+                    case 1:
+                        product = director.constuct("华为", "骁龙800", "2GB", "800万像素");
+                        break;
+                    case 2:
+                        product = director.constuct("魅族", "骁龙800", "2GB", "1500万像素");
+                        break;
+                    case 3:
+                        product = director.constuct("三星", "BOOM号", "4GB", "1300万像素");
+                        break;
+                }
+                assert product != null;
+                tv_build_6.setText(product.toString());
                 break;
         }
     }

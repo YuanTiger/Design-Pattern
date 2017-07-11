@@ -1,4 +1,4 @@
-package socket.my.com.designdemo.builder.customerview;
+package socket.my.com.designdemo.builder.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -25,13 +25,12 @@ import socket.my.com.designdemo.utils.ScreenUtil;
  */
 
 public class BuilderDialog extends Dialog {
-    TextView tvTitle;
-    ImageView ivIcon;
-    TextView tvMessage;
-    TextView tvButtonLeft;
-    TextView tvButtonRight;
-    ImageView viewLine;
-
+    private TextView tvTitle;
+    private ImageView ivIcon;
+    private TextView tvMessage;
+    private TextView tvButtonLeft;
+    private TextView tvButtonRight;
+    private ImageView viewLine;
 
     private static Builder builder;
 
@@ -44,11 +43,11 @@ public class BuilderDialog extends Dialog {
     }
 
 
-    public BuilderDialog(DialogConfig config) {
+    private BuilderDialog(DialogParams p) {
         //设置没有标题的Dialog风格
-        super(config.context,R.style.NoTitleDialog);
+        super(p.context, R.style.NoTitleDialog);
 
-        View contentView = LayoutInflater.from(config.context).inflate(R.layout.dialog_build, null);
+        View contentView = LayoutInflater.from(p.context).inflate(R.layout.dialog_build, null);
         setContentView(contentView);
 
         tvTitle = contentView.findViewById(R.id.tv_title);
@@ -58,7 +57,7 @@ public class BuilderDialog extends Dialog {
         tvButtonRight = contentView.findViewById(R.id.tv_button_right);
         viewLine = contentView.findViewById(R.id.view_line);
 
-
+        //控件默认隐藏
         tvTitle.setVisibility(View.GONE);
         viewLine.setVisibility(View.GONE);
         ivIcon.setVisibility(View.GONE);
@@ -67,18 +66,19 @@ public class BuilderDialog extends Dialog {
         tvButtonRight.setVisibility(View.GONE);
 
 
-        setTitlText(config.title);
-        setTitlTextSize(config.titleSizeSp);
-        setImageResource(config.imageResource);
-        setImageWidth(config.imageWidth);
-        setImageHeight(config.imageHeight);
-        setTvMessage(config.message1);
-        setTvMessageGravity(config.message1Gravity);
-        setCancelableFlag(config.isCanCancel);
-        setLeftText(config.leftButtonText, config.leftListener);
-        setLeftBtColor(config.leftBtColor);
-        setRightText(config.rightButtontText, config.rightListener);
-        setRightBtColor(config.rightBtColor);
+        //构建Dialog
+        setTitlText(p.title);
+        setTitlTextSize(p.titleSizeSp);
+        setImageResource(p.imageResource);
+        setImageWidth(p.imageWidth);
+        setImageHeight(p.imageHeight);
+        setTvMessage(p.message1);
+        setTvMessageGravity(p.message1Gravity);
+        setCancelableFlag(p.isCanCancel);
+        setLeftText(p.leftButtonText, p.leftListener);
+        setLeftBtColor(p.leftBtColor);
+        setRightText(p.rightButtontText, p.rightListener);
+        setRightBtColor(p.rightBtColor);
 
 
     }
@@ -86,7 +86,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置标题
      *
-     * @param title
+     * @param title 标题文字
      */
     private void setTitlText(String title) {
         if (TextUtils.isEmpty(title)) {
@@ -99,7 +99,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置标题大小
      *
-     * @param sp
+     * @param sp 字体大小
      */
     private void setTitlTextSize(int sp) {
         if (sp <= 0) {
@@ -111,7 +111,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置图片资源
      *
-     * @param imageResource
+     * @param imageResource 图片资源
      */
     private void setImageResource(int imageResource) {
         if (imageResource == 0) {
@@ -124,7 +124,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置图片宽度,单位dp
      *
-     * @param imageWidth
+     * @param imageWidth 图片宽度，单位dp
      */
     private void setImageWidth(int imageWidth) {
         if (imageWidth == 0) {
@@ -138,7 +138,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置图片高度,单位dp
      *
-     * @param imageHeight
+     * @param imageHeight 图片高度，单位dp
      */
     private void setImageHeight(int imageHeight) {
         if (imageHeight == 0) {
@@ -152,7 +152,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置Message的内容
      *
-     * @param text
+     * @param text 提示文字内容
      */
     private void setTvMessage(String text) {
         if (TextUtils.isEmpty(text)) {
@@ -190,7 +190,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置左边按钮字体颜色
      *
-     * @param color
+     * @param color 颜色的属性id
      */
     private void setLeftBtColor(int color) {
         if (color == 0) {
@@ -224,7 +224,7 @@ public class BuilderDialog extends Dialog {
     /**
      * 设置右Button字体颜色
      *
-     * @param color
+     * @param color 颜色的属性id
      */
     private void setRightBtColor(int color) {
         if (color == 0) {
@@ -242,98 +242,105 @@ public class BuilderDialog extends Dialog {
     @Override
     public void dismiss() {
         super.dismiss();
-        builder = null;
+        if (builder != null) {
+            builder.clear();
+            builder = null;
+        }
     }
 
 
     //--------------------------------Builder--------------------------------
     public static class Builder {
 
-        private DialogConfig dialogConfig;
+        private DialogParams p;
 
 
-        public Builder(Context context) {
-            dialogConfig = new DialogConfig();
-            dialogConfig.context = context;
+        Builder(Context context) {
+            p = new DialogParams();
+            p.context = context;
         }
 
         public Builder title(String text) {
-            dialogConfig.title = text;
+            p.title = text;
             return builder;
         }
 
         public Builder titleSize(int spSize) {
-            dialogConfig.titleSizeSp = spSize;
+            p.titleSizeSp = spSize;
             return builder;
         }
 
         public Builder imageResource(int imageResource) {
-            dialogConfig.imageResource = imageResource;
+            p.imageResource = imageResource;
             return builder;
         }
 
         public Builder imageWidth(int imageWidth) {
-            dialogConfig.imageWidth = imageWidth;
+            p.imageWidth = imageWidth;
             return builder;
         }
 
         public Builder imageHeight(int imageHeight) {
-            dialogConfig.imageHeight = imageHeight;
+            p.imageHeight = imageHeight;
             return builder;
         }
 
         public Builder message(String text) {
-            dialogConfig.message1 = text;
+            p.message1 = text;
             return builder;
         }
 
 
         public Builder messageGravity(int gravity) {
-            dialogConfig.message1Gravity = gravity;
+            p.message1Gravity = gravity;
             return builder;
         }
 
 
         public Builder canCancel(boolean isCanCancel) {
-            dialogConfig.isCanCancel = isCanCancel;
+            p.isCanCancel = isCanCancel;
             return builder;
         }
 
         public Builder leftBt(String text, ButtonClickLister lister) {
-            dialogConfig.leftButtonText = text;
-            dialogConfig.leftListener = lister;
+            p.leftButtonText = text;
+            p.leftListener = lister;
             return builder;
         }
 
         public Builder leftBtColor(int color) {
-            dialogConfig.leftBtColor = color;
+            p.leftBtColor = color;
             return builder;
         }
 
         public Builder rightBtColor(int color) {
-            dialogConfig.rightBtColor = color;
+            p.rightBtColor = color;
             return builder;
         }
 
         public Builder rightBt(String text, ButtonClickLister lister) {
-            dialogConfig.rightButtontText = text;
-            dialogConfig.rightListener = lister;
+            p.rightButtontText = text;
+            p.rightListener = lister;
             return builder;
         }
 
+        void clear() {
+            p = null;
+        }
+
         public BuilderDialog build() {
-            return new BuilderDialog(dialogConfig);
+            return new BuilderDialog(p);
         }
 
 
-        //--------------------------------按钮点击回调--------------------------------
+        //按钮点击回调
         public interface ButtonClickLister {
             void onClick(BuilderDialog dialog);
         }
     }
 
     //--------------------------------属性封装--------------------------------
-    public static class DialogConfig {
+    private static class DialogParams {
         private Context context;
         //标题
         private String title;

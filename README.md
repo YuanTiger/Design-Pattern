@@ -1,6 +1,6 @@
 ## 23种设计模式 ##
 - [x] [单例模式](https://z593492734.github.io/2017/05/27/Design-Single/)
-- [x] Builder模式
+- [x] [Builder模式](https://z593492734.github.io/2017/07/05/Design-Builder/)
 - [ ] 原型模式
 - [ ] 工厂方法模式
 - [ ] 抽象工厂模式
