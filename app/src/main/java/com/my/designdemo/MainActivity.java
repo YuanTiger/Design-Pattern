@@ -1,12 +1,13 @@
-package socket.my.com.designdemo;
+package com.my.designdemo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import socket.my.com.designdemo.builder.BuilderActivity;
-import socket.my.com.designdemo.single.SingleActivity;
+import com.my.designdemo.builder.BuilderActivity;
+import com.my.designdemo.single.SingleActivity;
+
 
 /**
  * Author：mengyuan

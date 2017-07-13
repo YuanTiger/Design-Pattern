@@ -1,4 +1,4 @@
-package socket.my.com.designdemo.single;
+package com.my.designdemo.single;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,10 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import socket.my.com.designdemo.R;
-import socket.my.com.designdemo.single.simple.最简单的懒汉式;
-import socket.my.com.designdemo.single.simple.枚举单例;
-import socket.my.com.designdemo.single.thread.EasyTrainThread;
+import com.my.designdemo.R;
+import com.my.designdemo.single.simple.枚举单例;
+import com.my.designdemo.single.thread.EasyTrainThread;
+
 
 /**
  * Author：mengyuan

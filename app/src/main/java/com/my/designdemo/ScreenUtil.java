@@ -1,10 +1,8 @@
-package socket.my.com.designdemo.utils;
+package com.my.designdemo;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
-
-import socket.my.com.designdemo.App;
 
 /**
  * 屏幕分辨率转换工具

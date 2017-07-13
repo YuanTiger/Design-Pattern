@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "socket.my.com.designdemo"
+        applicationId "com.my.designdemo"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

@@ -1,4 +1,4 @@
-package socket.my.com.designdemo;
+package com.my.designdemo;
 
 import android.app.Application;
 import android.content.Context;

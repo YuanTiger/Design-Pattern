@@ -1,12 +1,11 @@
-package socket.my.com.designdemo;
+package com.my.designdemo;
 
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
+
 
 /**
  * Author：mengyuan

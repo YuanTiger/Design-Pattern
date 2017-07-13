@@ -1,4 +1,4 @@
-package socket.my.com.designdemo.single.simple;
+package com.my.designdemo.single.simple;
 
 /**
  * Author：mengyuan

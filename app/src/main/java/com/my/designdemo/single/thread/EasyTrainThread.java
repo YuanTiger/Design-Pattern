@@ -1,6 +1,6 @@
-package socket.my.com.designdemo.single.thread;
+package com.my.designdemo.single.thread;
 
-import socket.my.com.designdemo.single.simple.最简单的懒汉式;
+import com.my.designdemo.single.simple.最简单的懒汉式;
 
 /**
  * Author：mengyuan

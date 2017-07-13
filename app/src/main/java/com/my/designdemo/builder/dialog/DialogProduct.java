@@ -1,4 +1,4 @@
-package socket.my.com.designdemo.builder.dialog;
+package com.my.designdemo.builder.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,20 +11,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import socket.my.com.designdemo.R;
-import socket.my.com.designdemo.utils.ScreenUtil;
+import com.my.designdemo.R;
+import com.my.designdemo.ScreenUtil;
+
 
 /**
  * Author：mengyuan
  * Date  : 2017/6/24下午6:32
  * E-Mail:mengyuanzz@126.com
- * Desc  :全局Dialog，采用Builder模式
+ * Desc  :全局Dialog，采用建造者模式
  * 注意：
  * 1、所有的控件默认全为隐藏，设置值才会显示出来，需要什么就设置什么即可
  * 2、关于Button，如果只有一个按钮，必须使用左边的按钮(leftButton)，因为2个按钮的分割线是与右边按钮(rightButton)绑定
  */
 
-public class NormalDialog extends Dialog {
+public class DialogProduct extends Dialog {
     private TextView tvTitle;
     private ImageView ivIcon;
     private TextView tvMessage;
@@ -35,6 +36,7 @@ public class NormalDialog extends Dialog {
     private static ConcreteBuilder builder;
 
 
+    //初始化Builder
     public static ConcreteBuilder with(Context context) {
         if (builder == null) {
             builder = new ConcreteBuilder(context);
@@ -43,7 +45,7 @@ public class NormalDialog extends Dialog {
     }
 
 
-    private NormalDialog(DialogParams p) {
+    private DialogProduct(DialogParams p) {
         //设置没有标题的Dialog风格
         super(p.context, R.style.NoTitleDialog);
 
@@ -180,7 +182,7 @@ public class NormalDialog extends Dialog {
         tvButtonLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickLister.onClick(NormalDialog.this);
+                clickLister.onClick(DialogProduct.this);
             }
         });
     }
@@ -214,7 +216,7 @@ public class NormalDialog extends Dialog {
         tvButtonRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickLister.onClick(NormalDialog.this);
+                clickLister.onClick(DialogProduct.this);
             }
         });
     }
@@ -325,14 +327,14 @@ public class NormalDialog extends Dialog {
             p = null;
         }
 
-        public NormalDialog create() {
-            return new NormalDialog(p);
+        public DialogProduct create() {
+            return new DialogProduct(p);
         }
 
 
         //按钮点击回调
         public interface ButtonClickLister {
-            void onClick(NormalDialog dialog);
+            void onClick(DialogProduct dialog);
         }
     }
 

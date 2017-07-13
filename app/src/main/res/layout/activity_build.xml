@@ -10,7 +10,7 @@
         android:orientation="vertical">
 
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_0"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -19,7 +19,7 @@
             android:layout_marginTop="15dp"
             android:text="一个按钮点击外部可关闭" />
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_1"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -28,7 +28,7 @@
             android:layout_marginTop="15dp"
             android:text="一个按钮点击外部不可关闭" />
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_2"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -37,7 +37,7 @@
             android:layout_marginTop="15dp"
             android:text="两个按钮点击外部可关闭" />
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_3"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -46,25 +46,25 @@
             android:layout_marginTop="15dp"
             android:text="两个按钮点击外部不可关闭" />
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_4"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:text="带图标的" />
+            android:text="充值" />
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_5"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:text="基本就这样了" />
+            android:text="退出登录" />
 
-        <socket.my.com.designdemo.MyButton
+        <com.my.designdemo.MyButton
             android:id="@+id/bt_build_6"
             android:layout_width="match_parent"
             android:layout_height="44dp"
