@@ -10,8 +10,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 import socket.my.com.designdemo.R;
-import socket.my.com.designdemo.builder.dialog.BuilderDialog;
-import socket.my.com.designdemo.builder.simple.ConcretePhoneBuilder;
+import socket.my.com.designdemo.builder.dialog.NormalDialog;
 import socket.my.com.designdemo.builder.simple.PhoneBuilder;
 import socket.my.com.designdemo.builder.simple.PhoneDirector;
 import socket.my.com.designdemo.builder.simple.PhoneProduct;
@@ -48,124 +47,127 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_build_0:
-                BuilderDialog.with(this)
+                NormalDialog.with(this)
                         .title("标题")
                         .message("我想靠右边显示")
                         .messageGravity(Gravity.START)
-                        .leftBt("test0", new BuilderDialog.Builder.ButtonClickLister() {
+                        .leftBt("test0", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "test", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .build()
+                        .create()
                         .show();
                 break;
             case R.id.bt_build_1:
-                BuilderDialog.with(this)
+                NormalDialog.with(this)
                         .message("我想居中")
                         .canCancel(false)
-                        .leftBt("test1", new BuilderDialog.Builder.ButtonClickLister() {
+                        .leftBt("test1", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "test1", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .build()
+                        .create()
                         .show();
                 break;
             case R.id.bt_build_2:
-                BuilderDialog.with(this)
+                NormalDialog.with(this)
                         .message("点击外部可以关闭，不信你点点")
                         .title("再来个标题")
-                        .leftBt("变个颜色", new BuilderDialog.Builder.ButtonClickLister() {
+                        .leftBt("变个颜色", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "test1", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
                         .leftBtColor(getResources().getColor(R.color.color_3ec179))
-                        .rightBt("test2", new BuilderDialog.Builder.ButtonClickLister() {
+                        .rightBt("test2", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "test2", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .build()
+                        .create()
                         .show();
                 break;
             case R.id.bt_build_3:
-                BuilderDialog.with(this)
+                NormalDialog.with(this)
                         .message("点击外部不可以关闭")
                         .canCancel(false)
                         .leftBtColor(getResources().getColor(R.color.color_0090ff))
                         .rightBtColor(getResources().getColor(R.color.color_f96c59))
-                        .leftBt("再变个颜色", new BuilderDialog.Builder.ButtonClickLister() {
+                        .leftBt("再变个颜色", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "test1", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .rightBt("test2", new BuilderDialog.Builder.ButtonClickLister() {
+                        .rightBt("test2", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "test2", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .build()
+                        .create()
                         .show();
                 break;
             case R.id.bt_build_4:
-                BuilderDialog.with(this)
+                NormalDialog.with(this)
                         .imageResource(R.mipmap.icon_failed)
                         .message("非常抱歉，充值失败！")
                         .canCancel(false)
-                        .leftBt("取消", new BuilderDialog.Builder.ButtonClickLister() {
+                        .leftBt("取消", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "取消", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .rightBt("重试", new BuilderDialog.Builder.ButtonClickLister() {
+                        .rightBt("重试", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "重试", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .build()
+                        .create()
                         .show();
                 break;
             case R.id.bt_build_5:
-                BuilderDialog.with(this)
+                NormalDialog.with(this)
                         .title("提示")
                         .message("您确认退出登录吗？")
-                        .leftBt("取消", new BuilderDialog.Builder.ButtonClickLister() {
+                        .canCancel(false)
+                        .leftBtColor(getResources().getColor(R.color.color_0090ff))
+                        .rightBtColor(getResources().getColor(R.color.color_f96c59))
+                        .leftBt("取消", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 dialog.cancel();
                             }
                         })
-                        .rightBt("确认", new BuilderDialog.Builder.ButtonClickLister() {
+                        .rightBt("确认", new NormalDialog.ConcreteBuilder.ButtonClickLister() {
                             @Override
-                            public void onClick(BuilderDialog dialog) {
+                            public void onClick(NormalDialog dialog) {
                                 Toast.makeText(BuilderActivity.this, "退出登录成功！", Toast.LENGTH_SHORT).show();
                                 dialog.cancel();
                             }
                         })
-                        .build()
+                        .create()
                         .show();
                 break;
             case R.id.bt_build_6:
                 //创建Builder对象
-                PhoneBuilder miBuilder = new ConcretePhoneBuilder();
+                PhoneBuilder miBuilder = new socket.my.com.designdemo.builder.simple.ConcretePhoneBuilder();
                 //创建管理者
                 PhoneDirector director = new PhoneDirector(miBuilder);
                 //生成商品

@@ -24,7 +24,7 @@ import socket.my.com.designdemo.utils.ScreenUtil;
  * 2、关于Button，如果只有一个按钮，必须使用左边的按钮(leftButton)，因为2个按钮的分割线是与右边按钮(rightButton)绑定
  */
 
-public class BuilderDialog extends Dialog {
+public class NormalDialog extends Dialog {
     private TextView tvTitle;
     private ImageView ivIcon;
     private TextView tvMessage;
@@ -32,18 +32,18 @@ public class BuilderDialog extends Dialog {
     private TextView tvButtonRight;
     private ImageView viewLine;
 
-    private static Builder builder;
+    private static ConcreteBuilder builder;
 
 
-    public static Builder with(Context context) {
+    public static ConcreteBuilder with(Context context) {
         if (builder == null) {
-            builder = new Builder(context);
+            builder = new ConcreteBuilder(context);
         }
         return builder;
     }
 
 
-    private BuilderDialog(DialogParams p) {
+    private NormalDialog(DialogParams p) {
         //设置没有标题的Dialog风格
         super(p.context, R.style.NoTitleDialog);
 
@@ -64,8 +64,6 @@ public class BuilderDialog extends Dialog {
         tvMessage.setVisibility(View.GONE);
         tvButtonLeft.setVisibility(View.GONE);
         tvButtonRight.setVisibility(View.GONE);
-
-
         //构建Dialog
         setTitlText(p.title);
         setTitlTextSize(p.titleSizeSp);
@@ -173,7 +171,7 @@ public class BuilderDialog extends Dialog {
      * @param text        文字内容
      * @param clickLister 点击监听
      */
-    private void setLeftText(String text, final Builder.ButtonClickLister clickLister) {
+    private void setLeftText(String text, final ConcreteBuilder.ButtonClickLister clickLister) {
         if (TextUtils.isEmpty(text) || clickLister == null) {
             return;
         }
@@ -182,7 +180,7 @@ public class BuilderDialog extends Dialog {
         tvButtonLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickLister.onClick(BuilderDialog.this);
+                clickLister.onClick(NormalDialog.this);
             }
         });
     }
@@ -205,7 +203,7 @@ public class BuilderDialog extends Dialog {
      * @param text        文字内容
      * @param clickLister 点击监听
      */
-    private void setRightText(String text, final Builder.ButtonClickLister clickLister) {
+    private void setRightText(String text, final ConcreteBuilder.ButtonClickLister clickLister) {
         if (TextUtils.isEmpty(text) || clickLister == null) {
             return;
         }
@@ -216,7 +214,7 @@ public class BuilderDialog extends Dialog {
         tvButtonRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickLister.onClick(BuilderDialog.this);
+                clickLister.onClick(NormalDialog.this);
             }
         });
     }
@@ -249,76 +247,75 @@ public class BuilderDialog extends Dialog {
     }
 
 
-    //--------------------------------Builder--------------------------------
-    public static class Builder {
+    //--------------------------------ConcreteBuilder--------------------------------
+    public static class ConcreteBuilder {
 
         private DialogParams p;
 
-
-        Builder(Context context) {
+        ConcreteBuilder(Context context) {
             p = new DialogParams();
             p.context = context;
         }
 
-        public Builder title(String text) {
+        public ConcreteBuilder title(String text) {
             p.title = text;
             return builder;
         }
 
-        public Builder titleSize(int spSize) {
+        public ConcreteBuilder titleSize(int spSize) {
             p.titleSizeSp = spSize;
             return builder;
         }
 
-        public Builder imageResource(int imageResource) {
+        public ConcreteBuilder imageResource(int imageResource) {
             p.imageResource = imageResource;
             return builder;
         }
 
-        public Builder imageWidth(int imageWidth) {
+        public ConcreteBuilder imageWidth(int imageWidth) {
             p.imageWidth = imageWidth;
             return builder;
         }
 
-        public Builder imageHeight(int imageHeight) {
+        public ConcreteBuilder imageHeight(int imageHeight) {
             p.imageHeight = imageHeight;
             return builder;
         }
 
-        public Builder message(String text) {
+        public ConcreteBuilder message(String text) {
             p.message1 = text;
             return builder;
         }
 
 
-        public Builder messageGravity(int gravity) {
+        public ConcreteBuilder messageGravity(int gravity) {
             p.message1Gravity = gravity;
             return builder;
         }
 
 
-        public Builder canCancel(boolean isCanCancel) {
+        public ConcreteBuilder canCancel(boolean isCanCancel) {
             p.isCanCancel = isCanCancel;
             return builder;
         }
 
-        public Builder leftBt(String text, ButtonClickLister lister) {
+        public ConcreteBuilder leftBt(String text, ButtonClickLister lister) {
             p.leftButtonText = text;
             p.leftListener = lister;
             return builder;
         }
 
-        public Builder leftBtColor(int color) {
+        public ConcreteBuilder leftBtColor(int color) {
             p.leftBtColor = color;
             return builder;
         }
 
-        public Builder rightBtColor(int color) {
+        public ConcreteBuilder rightBtColor(int color) {
             p.rightBtColor = color;
             return builder;
         }
 
-        public Builder rightBt(String text, ButtonClickLister lister) {
+        public ConcreteBuilder rightBt(String text, ButtonClickLister lister) {
             p.rightButtontText = text;
             p.rightListener = lister;
             return builder;
@@ -328,14 +325,14 @@ public class BuilderDialog extends Dialog {
             p = null;
         }
 
-        public BuilderDialog build() {
-            return new BuilderDialog(p);
+        public NormalDialog create() {
+            return new NormalDialog(p);
         }
 
 
         //按钮点击回调
         public interface ButtonClickLister {
-            void onClick(BuilderDialog dialog);
+            void onClick(NormalDialog dialog);
         }
     }
 
@@ -363,12 +360,12 @@ public class BuilderDialog extends Dialog {
         //左边按钮颜色
         private int leftBtColor;
         //左边点击事件
-        private Builder.ButtonClickLister leftListener;
+        private ConcreteBuilder.ButtonClickLister leftListener;
         //右边按钮内容
         private String rightButtontText;
         //右边边按钮颜色
         private int rightBtColor;
         //右边按钮点击事件
-        private Builder.ButtonClickLister rightListener;
+        private ConcreteBuilder.ButtonClickLister rightListener;
     }
 }
