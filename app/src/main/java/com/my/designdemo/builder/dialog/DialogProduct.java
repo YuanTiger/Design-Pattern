@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.my.designdemo.R;
-import com.my.designdemo.ScreenUtil;
+import com.my.designdemo.utils.ScreenUtil;
 
 
 /**

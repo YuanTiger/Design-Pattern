@@ -12,6 +12,6 @@ public enum 枚举单例 {
     INSTANCE;
 
     public String getUrl(){
-        return "http://www.baidu.com";
+        return "http://www.jianshu.com/u/7b265b275ad0";
     }
 }

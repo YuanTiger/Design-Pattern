@@ -5,6 +5,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
 
@@ -54,7 +58,13 @@ public class SingleActivity extends AppCompatActivity implements View.OnClickLis
                 easySaleTicket();
                 break;
             case R.id.bt_single_1://枚举单例
-                tv_single_1.setText(枚举单例.INSTANCE.getUrl());
+                String url = 枚举单例.INSTANCE.getUrl();
+
+                SpannableStringBuilder styled = new SpannableStringBuilder(url);
+                styled.setSpan(new URLSpan(url), 0, url.length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+                //设置超链接可点击
+                tv_single_1.setMovementMethod(new LinkMovementMethod());
+                tv_single_1.setText(styled);
                 break;
         }
     }

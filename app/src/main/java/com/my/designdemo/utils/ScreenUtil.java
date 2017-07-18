@@ -1,8 +1,10 @@
-package com.my.designdemo;
+package com.my.designdemo.utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+
+import com.my.designdemo.App;
 
 /**
  * 屏幕分辨率转换工具

@@ -17,6 +17,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="一个按钮点击外部可关闭" />
 
         <com.my.designdemo.MyButton
@@ -25,7 +26,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="一个按钮点击外部不可关闭" />
 
         <com.my.designdemo.MyButton
@@ -34,7 +35,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="两个按钮点击外部可关闭" />
 
         <com.my.designdemo.MyButton
@@ -43,7 +44,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="两个按钮点击外部不可关闭" />
 
         <com.my.designdemo.MyButton
@@ -52,7 +53,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="充值" />
 
         <com.my.designdemo.MyButton
@@ -61,7 +62,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="退出登录" />
 
         <com.my.designdemo.MyButton
@@ -70,7 +71,7 @@
             android:layout_height="44dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
             android:text="构建一台手机" />
 
         <TextView
@@ -79,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp" />
+            android:layout_marginBottom="15dp" />
 
     </LinearLayout>
 
