@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.my.designdemo.builder.BuilderActivity;
 import com.my.designdemo.clone.CloneActivity;
+import com.my.designdemo.factory.FactoryActivity;
 import com.my.designdemo.single.SingleActivity;
 
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_single).setOnClickListener(this);
         findViewById(R.id.bt_build).setOnClickListener(this);
         findViewById(R.id.bt_clone).setOnClickListener(this);
+        findViewById(R.id.bt_factory).setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_clone:
                 intent = new Intent(this, CloneActivity.class);
+                break;
+            case R.id.bt_factory:
+                intent = new Intent(this, FactoryActivity.class);
                 break;
         }
         if (intent != null) {

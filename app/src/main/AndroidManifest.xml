@@ -21,6 +21,7 @@
         <activity android:name=".single.SingleActivity" />
         <activity android:name=".builder.BuilderActivity" />
         <activity android:name=".clone.CloneActivity" />
+        <activity android:name=".factory.FactoryActivity" />
     </application>
 
 </manifest>
