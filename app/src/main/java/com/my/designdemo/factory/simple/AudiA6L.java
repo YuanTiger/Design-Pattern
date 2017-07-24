@@ -12,11 +12,11 @@ import android.util.Log;
 public class AudiA6L implements CarProduct{
     @Override
     public void drive() {
-        Log.i("factory","奥迪A6L，平稳起步");
+        Log.i("factory","奥迪A6L，平稳起步。");
     }
 
     @Override
     public void openHeadlamps() {
-        Log.i("factory","奥迪A6L，尊享华丽大灯打开");
+        Log.i("factory","奥迪A6L，尊享华丽大灯打开！");
     }
 }

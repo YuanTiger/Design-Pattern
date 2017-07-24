@@ -18,4 +18,9 @@ public interface CarProduct {
      * 打开车的大灯
      */
     void openHeadlamps();
+
+
+    //....省略其他功能
+
+
 }

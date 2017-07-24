@@ -17,6 +17,6 @@ public class BenzE260L implements CarProduct {
 
     @Override
     public void openHeadlamps() {
-        Log.i("factory","奔驰E260L，标配大灯打开");
+        Log.i("factory","奔驰E260L，标配大灯打开。");
     }
 }

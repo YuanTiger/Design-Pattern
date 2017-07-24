@@ -2,7 +2,7 @@
 - [x] [单例模式](https://z593492734.github.io/2017/05/27/Design-Single/)
 - [x] [建造者模式](https://z593492734.github.io/2017/07/05/Design-Builder/)
 - [x] [原型模式](https://z593492734.github.io/2017/07/15/Design-Clone/)
-- [ ] 工厂方法模式
+- [x] [工厂方法模式](https://z593492734.github.io/2017/07/24/Design-Factory/)
 - [ ] 抽象工厂模式
 - [ ] 策略模式
 - [ ] 状态模式

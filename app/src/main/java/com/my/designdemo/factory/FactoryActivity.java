@@ -61,7 +61,6 @@ public class FactoryActivity extends AppCompatActivity implements View.OnClickLi
                 //测试
                 benzE260L.drive();
                 audiA6L.drive();
-
                 benzE260L.openHeadlamps();
                 audiA6L.openHeadlamps();
                 break;
