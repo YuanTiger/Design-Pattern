@@ -13,7 +13,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -22,6 +21,7 @@
         <activity android:name=".builder.BuilderActivity" />
         <activity android:name=".clone.CloneActivity" />
         <activity android:name=".factory.FactoryActivity" />
+        <activity android:name=".absfactory.AbsFactoryActivity" />
     </application>
 
 </manifest>

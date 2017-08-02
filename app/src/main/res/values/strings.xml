@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">DesignDemo</string>
     <string name="model_factory">工厂方法模式</string>
+    <string name="model_abs_factory">抽象工厂模式</string>
     <string name="model_single">单例模式</string>
     <string name="model_builder">建造者模式</string>
+    <string name="model_clone">原型模式</string>
+    <string name="window_phone">WindowPhone</string>
+    <string name="ios">iOS</string>
+    <string name="android">Android</string>
+    <string name="system_error">系统不匹配，请检查！</string>
+
+
 </resources>

@@ -4,7 +4,7 @@ package com.my.designdemo.factory.simple;
  * Author：mengyuan
  * Date  : 2017/7/24下午2:41
  * E-Mail:mengyuanzz@126.com
- * Desc  :
+ * Desc  :汽车功能抽象
  */
 
 public interface CarProduct {

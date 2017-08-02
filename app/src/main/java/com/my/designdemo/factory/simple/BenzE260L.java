@@ -6,7 +6,7 @@ import android.util.Log;
  * Author：mengyuan
  * Date  : 2017/7/24下午2:53
  * E-Mail:mengyuanzz@126.com
- * Desc  :
+ * Desc  :奔驰E260L功能细节
  */
 
 public class BenzE260L implements CarProduct {

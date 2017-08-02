@@ -6,7 +6,7 @@ import android.util.Log;
  * Author：mengyuan
  * Date  : 2017/7/24下午2:51
  * E-Mail:mengyuanzz@126.com
- * Desc  :
+ * Desc  :奥迪A6L功能细节
  */
 
 public class AudiA6L implements CarProduct{
