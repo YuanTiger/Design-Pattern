@@ -10,7 +10,7 @@
         android:orientation="vertical">
 
 
-        <com.my.designdemo.MyButton
+        <com.my.designdemo.view.MyButton
             android:id="@+id/bt_abs_factory_0"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -20,7 +20,7 @@
             android:layout_marginTop="15dp"
             android:text="使用WindowPhone的Button" />
 
-        <com.my.designdemo.MyButton
+        <com.my.designdemo.view.MyButton
             android:id="@+id/bt_abs_factory_1"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -30,7 +30,7 @@
             android:layout_marginTop="15dp"
             android:text="使用iOS的Button" />
 
-        <com.my.designdemo.MyButton
+        <com.my.designdemo.view.MyButton
             android:id="@+id/bt_abs_factory_2"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -40,7 +40,7 @@
             android:layout_marginTop="15dp"
             android:text="使用Android的Button" />
 
-        <com.my.designdemo.MyButton
+        <com.my.designdemo.view.MyButton
             android:id="@+id/bt_abs_factory_3"
             android:layout_width="match_parent"
             android:layout_height="44dp"

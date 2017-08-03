@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
 
-        <com.my.designdemo.MyButton
+        <com.my.designdemo.view.MyButton
             android:id="@+id/bt_single_0"
             android:layout_width="match_parent"
             android:layout_height="44dp"
@@ -30,7 +30,7 @@
             android:layout_marginRight="15dp"
             />
 
-        <com.my.designdemo.MyButton
+        <com.my.designdemo.view.MyButton
             android:id="@+id/bt_single_1"
             android:layout_width="match_parent"
             android:layout_height="44dp"

@@ -1,10 +1,12 @@
-package com.my.designdemo;
+package com.my.designdemo.view;
 
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+
+import com.my.designdemo.R;
 
 
 /**
