@@ -5,6 +5,7 @@
     <string name="model_single">单例模式</string>
     <string name="model_builder">建造者模式</string>
     <string name="model_clone">原型模式</string>
+    <string name="model_state">状态模式</string>
     <string name="model_strategy">策略模式</string>
     <string name="window_phone">WindowPhone</string>
     <string name="ios">iOS</string>

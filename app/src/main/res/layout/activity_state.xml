@@ -1,83 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="none">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="15dp">
+        android:orientation="vertical">
 
 
         <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_single"
+            android:id="@+id/bt_login"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:text="@string/model_single" />
-
+            android:text="登录" />
 
         <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_build"
+            android:id="@+id/bt_logout"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/model_builder" />
+            android:text="退出登录" />
 
         <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_clone"
+            android:id="@+id/bt_see_money"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/model_clone" />
+            android:text="查看余额" />
+
 
         <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_factory"
+            android:id="@+id/bt_earn_money"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/model_factory" />
+            android:text="赚金币" />
 
         <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_abs_factory"
+            android:id="@+id/bt_exchange"
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/model_abs_factory" />
-
-
-        <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_strategy"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:text="@string/model_strategy" />
-
-
-        <com.my.designdemo.view.MyButton
-            android:id="@+id/bt_state"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:text="@string/model_state" />
+            android:text="兑换道具" />
     </LinearLayout>
 
-</ScrollView>
 
+</ScrollView>

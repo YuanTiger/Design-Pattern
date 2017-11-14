@@ -23,6 +23,7 @@
         <activity android:name=".factory.FactoryActivity" />
         <activity android:name=".absfactory.AbsFactoryActivity" />
         <activity android:name=".strategy.StrategyActivity" />
+        <activity android:name=".state.StateActivity" />
     </application>
 
 </manifest>
