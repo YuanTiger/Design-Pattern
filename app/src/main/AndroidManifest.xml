@@ -17,13 +17,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".single.SingleActivity" />
-        <activity android:name=".builder.BuilderActivity" />
-        <activity android:name=".clone.CloneActivity" />
-        <activity android:name=".factory.FactoryActivity" />
-        <activity android:name=".absfactory.AbsFactoryActivity" />
-        <activity android:name=".strategy.StrategyActivity" />
-        <activity android:name=".state.StateActivity" />
+        <activity android:name=".design.single.SingleActivity" />
+        <activity android:name=".design.builder.BuilderActivity" />
+        <activity android:name=".design.clone.CloneActivity" />
+        <activity android:name=".design.factory.FactoryActivity" />
+        <activity android:name=".design.absfactory.AbsFactoryActivity" />
+        <activity android:name=".design.strategy.StrategyActivity" />
+        <activity android:name=".design.state.StateActivity" />
+        <activity android:name=".design.responsibility.ResponsibilityActivity" />
     </application>
 
 </manifest>

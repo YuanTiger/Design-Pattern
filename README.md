@@ -11,7 +11,7 @@
 - [x] [抽象工厂模式](https://z593492734.github.io/2017/08/02/Design-Abs-Factory/)
 - [x] [策略模式](https://z593492734.github.io/2017/08/02/Design-Strategy/)
 - [x] [状态模式](https://yuantiger.github.io/2017/11/14/Design-State/)
-- [ ] 责任链模式
+- [x] [责任链模式](https://yuantiger.github.io/2017/11/16/Design-Responsibility/)
 - [ ] 解释器模式
 - [ ] 命令模式
 - [ ] 观察者模式

@@ -11,6 +11,8 @@
     <string name="ios">iOS</string>
     <string name="android">Android</string>
     <string name="system_error">系统不匹配，请检查！</string>
+    <string name="model_responsibility">责任链模式</string>
+    <string name="please_input_money">请输入报销金额</string>
 
 
 </resources>

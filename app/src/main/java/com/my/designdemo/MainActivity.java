@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.my.designdemo.absfactory.AbsFactoryActivity;
-import com.my.designdemo.builder.BuilderActivity;
-import com.my.designdemo.clone.CloneActivity;
-import com.my.designdemo.factory.FactoryActivity;
-import com.my.designdemo.single.SingleActivity;
-import com.my.designdemo.state.StateActivity;
-import com.my.designdemo.strategy.StrategyActivity;
+import com.my.designdemo.design.absfactory.AbsFactoryActivity;
+import com.my.designdemo.design.builder.BuilderActivity;
+import com.my.designdemo.design.clone.CloneActivity;
+import com.my.designdemo.design.factory.FactoryActivity;
+import com.my.designdemo.design.responsibility.ResponsibilityActivity;
+import com.my.designdemo.design.single.SingleActivity;
+import com.my.designdemo.design.state.StateActivity;
+import com.my.designdemo.design.strategy.StrategyActivity;
 
 
 /**
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_abs_factory).setOnClickListener(this);
         findViewById(R.id.bt_strategy).setOnClickListener(this);
         findViewById(R.id.bt_state).setOnClickListener(this);
+        findViewById(R.id.bt_responsibility).setOnClickListener(this);
     }
 
     @Override
@@ -61,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_state:
                 intent = new Intent(this, StateActivity.class);
+                break;
+                case R.id.bt_responsibility:
+                intent = new Intent(this, ResponsibilityActivity.class);
                 break;
         }
         if (intent != null) {
