@@ -16,4 +16,5 @@
     <color name="color_45c07b">#45c07b</color>
     <color name="color_5787bd">#5787bd</color>
     <color name="color_000000">#000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

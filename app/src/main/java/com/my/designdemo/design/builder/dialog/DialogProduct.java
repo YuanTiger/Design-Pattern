@@ -67,8 +67,8 @@ public class DialogProduct extends Dialog {
         tvButtonLeft.setVisibility(View.GONE);
         tvButtonRight.setVisibility(View.GONE);
         //构建Dialog
-        setTitlText(p.title);
-        setTitlTextSize(p.titleSizeSp);
+        setTitleText(p.title);
+        setTitleTextSize(p.titleSizeSp);
         setImageResource(p.imageResource);
         setImageWidth(p.imageWidth);
         setImageHeight(p.imageHeight);
@@ -77,7 +77,7 @@ public class DialogProduct extends Dialog {
         setCancelableFlag(p.isCanCancel);
         setLeftText(p.leftButtonText, p.leftListener);
         setLeftBtColor(p.leftBtColor);
-        setRightText(p.rightButtontText, p.rightListener);
+        setRightText(p.rightButtonText, p.rightListener);
         setRightBtColor(p.rightBtColor);
 
 
@@ -88,7 +88,7 @@ public class DialogProduct extends Dialog {
      *
      * @param title 标题文字
      */
-    private void setTitlText(String title) {
+    private void setTitleText(String title) {
         if (TextUtils.isEmpty(title)) {
             return;
         }
@@ -101,7 +101,7 @@ public class DialogProduct extends Dialog {
      *
      * @param sp 字体大小
      */
-    private void setTitlTextSize(int sp) {
+    private void setTitleTextSize(int sp) {
         if (sp <= 0) {
             return;
         }
@@ -318,7 +318,7 @@ public class DialogProduct extends Dialog {
         }
 
         public ConcreteBuilder rightBt(String text, ButtonClickLister lister) {
-            p.rightButtontText = text;
+            p.rightButtonText = text;
             p.rightListener = lister;
             return builder;
         }
@@ -364,7 +364,7 @@ public class DialogProduct extends Dialog {
         //左边点击事件
         private ConcreteBuilder.ButtonClickLister leftListener;
         //右边按钮内容
-        private String rightButtontText;
+        private String rightButtonText;
         //右边边按钮颜色
         private int rightBtColor;
         //右边按钮点击事件

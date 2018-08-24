@@ -9,8 +9,18 @@
     </style>
 
 
-    <style name="NoTitleDialog"
-        parent="android:style/Theme.Dialog">
+    <!-- Dialog样式 -->
+    <style name="NoTitleDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <!-- 设置未浮动窗口 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置无边框 -->
         <item name="android:windowNoTitle">true</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 设置完全透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 设置背景模糊的透明度-->
+        <item name="android:backgroundDimAmount">0.8</item>
     </style>
 </resources>

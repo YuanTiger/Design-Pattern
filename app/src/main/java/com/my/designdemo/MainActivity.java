@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_state:
                 intent = new Intent(this, StateActivity.class);
                 break;
-                case R.id.bt_responsibility:
+            case R.id.bt_responsibility:
                 intent = new Intent(this, ResponsibilityActivity.class);
                 break;
         }

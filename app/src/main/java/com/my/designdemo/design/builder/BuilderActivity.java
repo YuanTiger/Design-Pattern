@@ -51,7 +51,7 @@ public class BuilderActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.bt_build_0:
                 DialogProduct.with(this)
                         .title("标题")
-                        .message("我想靠右边显示")
+                        .message("我想靠左边显示")
                         .messageGravity(Gravity.START)
                         .leftBt("test0", new DialogProduct.ConcreteBuilder.ButtonClickLister() {
                             @Override

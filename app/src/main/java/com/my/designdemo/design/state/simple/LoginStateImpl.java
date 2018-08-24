@@ -18,10 +18,7 @@ public class LoginStateImpl implements UserState {
     }
 
     @Override
-    public void logout() {
-
-        Toast.makeText(App.context, "退出登录成功！", Toast.LENGTH_SHORT).show();
-    }
+    public void logout() { Toast.makeText(App.context, "退出登录成功！", Toast.LENGTH_SHORT).show(); }
 
     @Override
     public void seeMoney() {
