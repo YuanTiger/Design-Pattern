@@ -6,7 +6,7 @@ import android.view.View;
 
 import com.my.designdemo.R;
 import com.my.designdemo.design.state.simple.LoginStateImpl;
-import com.my.designdemo.design.state.simple.LogutStateImpl;
+import com.my.designdemo.design.state.simple.LogoutStateImpl;
 import com.my.designdemo.design.state.simple.UserState;
 
 
@@ -33,7 +33,7 @@ public class StateActivity extends AppCompatActivity implements View.OnClickList
     }
 
     //默认是未登录状态
-    private UserState userState = new LogutStateImpl();
+    private UserState userState = new LogoutStateImpl();
 
     @Override
     public void onClick(View view) {
@@ -45,7 +45,7 @@ public class StateActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.bt_logout://退出登录行为
                 userState.logout();
-                userState = new LogutStateImpl();
+                userState = new LogoutStateImpl();
                 break;
             case R.id.bt_see_money://查看余额行为
                 userState.seeMoney();

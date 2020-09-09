@@ -11,7 +11,7 @@ import com.my.designdemo.App;
  * Desc  :
  */
 
-public class LogutStateImpl implements UserState {
+public class LogoutStateImpl implements UserState {
     @Override
     public void login() {
         Toast.makeText(App.context, "登录成功！", Toast.LENGTH_SHORT).show();
@@ -26,7 +26,7 @@ public class LogutStateImpl implements UserState {
     }
 
     @Override
-    public void earnMoney() { Toast.makeText(App.context, "跳转到-赚金币-未登录状态", Toast.LENGTH_SHORT).show(); }
+    public void earnMoney() { Toast.makeText(App.context, "您还未登录！", Toast.LENGTH_SHORT).show(); }
 
     @Override
     public void exchange() {
