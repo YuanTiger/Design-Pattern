@@ -24,6 +24,7 @@
         <activity android:name=".design.absfactory.AbsFactoryActivity" />
         <activity android:name=".design.strategy.StrategyActivity" />
         <activity android:name=".design.state.StateActivity" />
+        <activity android:name=".design.command.CommandActivity" />
         <activity android:name=".design.responsibility.ResponsibilityActivity" />
     </application>
 

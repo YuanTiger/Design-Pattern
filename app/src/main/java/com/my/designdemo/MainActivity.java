@@ -8,6 +8,7 @@ import android.view.View;
 import com.my.designdemo.design.absfactory.AbsFactoryActivity;
 import com.my.designdemo.design.builder.BuilderActivity;
 import com.my.designdemo.design.clone.CloneActivity;
+import com.my.designdemo.design.command.CommandActivity;
 import com.my.designdemo.design.factory.FactoryActivity;
 import com.my.designdemo.design.responsibility.ResponsibilityActivity;
 import com.my.designdemo.design.single.SingleActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_single).setOnClickListener(this);
         findViewById(R.id.bt_build).setOnClickListener(this);
         findViewById(R.id.bt_clone).setOnClickListener(this);
+        findViewById(R.id.bt_command).setOnClickListener(this);
         findViewById(R.id.bt_factory).setOnClickListener(this);
         findViewById(R.id.bt_abs_factory).setOnClickListener(this);
         findViewById(R.id.bt_strategy).setOnClickListener(this);
@@ -66,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_responsibility:
                 intent = new Intent(this, ResponsibilityActivity.class);
+                break;
+            case R.id.bt_command:
+                intent = new Intent(this, CommandActivity.class);
                 break;
         }
         if (intent != null) {

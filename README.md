@@ -13,7 +13,7 @@
 - [x] [状态模式](https://yuantiger.github.io/2017/11/14/Design-State/)
 - [x] [责任链模式](https://yuantiger.github.io/2017/11/16/Design-Responsibility/)
 - [ ] 解释器模式
-- [ ] 命令模式
+- [x] [命令模式](https://yuantiger.github.io/2020/09/09/Design-Command/)
 - [ ] 观察者模式
 - [ ] 备忘录模式
 - [ ] 迭代器模式
