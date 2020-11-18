@@ -7,9 +7,9 @@ package com.my.designdemo.design.strategy.simple;
  * Desc  :
  */
 
-public class TaxStrategyCaculate implements StrategyCaculate {
+public class CalculateStrategyTax implements CalculateStrategy {
     @Override
-    public float caculatePrice(int km) {
+    public float calculatePrice(int km) {
         if (km <= 0) {
             return 0;
         }

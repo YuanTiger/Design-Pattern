@@ -38,12 +38,12 @@ public class StrategyActivity extends AppCompatActivity implements View.OnClickL
 
         setContentView(R.layout.activity_strategy);
 
-        et_strategy_number = (EditText) findViewById(R.id.et_strategy_number);
-        tv_strategy_price = (TextView) findViewById(R.id.tv_strategy_price);
+        et_strategy_number = findViewById(R.id.et_strategy_number);
+        tv_strategy_price = findViewById(R.id.tv_strategy_price);
 
-        cb_bus = (CheckBox) findViewById(R.id.cb_bus);
-        cb_tax = (CheckBox) findViewById(R.id.cb_tax);
-        cb_subway = (CheckBox) findViewById(R.id.cb_subway);
+        cb_bus = findViewById(R.id.cb_bus);
+        cb_tax = findViewById(R.id.cb_tax);
+        cb_subway = findViewById(R.id.cb_subway);
 
 
         findViewById(R.id.bt_strategy_0).setOnClickListener(this);
@@ -90,13 +90,14 @@ public class StrategyActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(this, "请选择出行方式", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                caculatePrice(km);
+                calculatePrice(km);
                 break;
         }
     }
 
-    private void caculatePrice(String km) {
-        float price = PriceCaculateController.cacluatePrice(Integer.valueOf(km), selectMode.getType());
+    private void calculatePrice(String km) {
+//        float price = PriceCalculateController.calculatePrice(Integer.parseInt(km), selectMode.getType());
+        float price = CalculateStrategyController.calculatePrice(Integer.parseInt(km), selectMode.getType());
         tv_strategy_price.setText("使用-" + selectMode.getTripName() + "-行驶了" + km + "Km，共计：" + price + "元");
 
     }

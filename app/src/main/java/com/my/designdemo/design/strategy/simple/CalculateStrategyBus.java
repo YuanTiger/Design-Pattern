@@ -7,21 +7,18 @@ package com.my.designdemo.design.strategy.simple;
  * Desc  :
  */
 
-public class SubwayStrategyCaculate implements StrategyCaculate {
+public class CalculateStrategyBus implements CalculateStrategy {
     @Override
-    public float caculatePrice(int km) {
+    public float calculatePrice(int km) {
         if (km <= 0) {
             return 0;
         }
         if (km <= 5) {
-            return 3;
+            return 2;
         }
         if (km <= 10) {
-            return 4;
+            return 3;
         }
-        if (km <= 15) {
-            return 5;
-        }
-        return 6;
+        return 4;
     }
 }

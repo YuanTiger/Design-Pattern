@@ -7,10 +7,10 @@ package com.my.designdemo.design.strategy.simple;
  * Desc  :
  */
 
-public interface StrategyCaculate {
+public interface CalculateStrategy {
 
     /**
      * 根据距离计算价格
      */
-    float caculatePrice(int km);
+    float calculatePrice(int km);
 }
