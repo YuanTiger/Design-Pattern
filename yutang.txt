@@ -1,1 +1,0 @@
-$sws_split$http://uri-api.yindui.net/?app=yutang$sws_split$
